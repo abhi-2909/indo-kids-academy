@@ -1,0 +1,1474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Contact Us | Indo Kids Academy Senior Secondary School
+    </title>
+
+    <meta
+        name="description"
+        content="Contact Indo Kids Academy Senior Secondary School in Jaipur. Find our address and send us your enquiry."
+    >
+
+    <meta
+        name="keywords"
+        content="Indo Kids Academy contact, school contact Jaipur, RBSE school Jaipur, school address Jaipur"
+    >
+
+    <meta
+        name="author"
+        content="Indo Kids Academy Senior Secondary School"
+    >
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="images/logo.png"
+    >
+
+    <!-- Google Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Main CSS -->
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+
+    <!-- Contact Page CSS -->
+
+    <style>
+
+        /* =====================================================
+           CONTACT PAGE
+        ===================================================== */
+
+        .contact-page {
+            background: var(--white);
+        }
+
+
+        /* =====================================================
+           CONTACT INFORMATION
+        ===================================================== */
+
+        .contact-main-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+
+        .contact-info h2 {
+            color: var(--dark-blue);
+            font-size: clamp(30px, 4vw, 43px);
+            line-height: 1.25;
+            margin-bottom: 15px;
+        }
+
+
+        .contact-info h2 span {
+            color: var(--primary-red);
+        }
+
+
+        .contact-info > p {
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+
+        .contact-info-list {
+            display: grid;
+            gap: 18px;
+        }
+
+
+        .contact-info-box {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 18px;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+        }
+
+
+        .contact-info-icon {
+            flex: 0 0 48px;
+            width: 48px;
+            height: 48px;
+            display: grid;
+            place-items: center;
+            border-radius: 12px;
+            background: var(--light-blue);
+            font-size: 21px;
+        }
+
+
+        .contact-info-box h3 {
+            color: var(--primary-blue);
+            font-size: 15px;
+            margin-bottom: 4px;
+        }
+
+
+        .contact-info-box p {
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.65;
+        }
+
+
+        /* =====================================================
+           CONTACT FORM
+        ===================================================== */
+
+        .contact-form-wrapper {
+            padding: 35px;
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-md);
+        }
+
+
+        .contact-form-heading {
+            margin-bottom: 25px;
+        }
+
+
+        .contact-form-heading h2 {
+            color: var(--dark-blue);
+            font-size: 27px;
+            margin-bottom: 7px;
+        }
+
+
+        .contact-form-heading p {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+
+        .contact-form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+
+        .contact-form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .contact-form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+
+        .contact-form-group label {
+            color: var(--black);
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 7px;
+        }
+
+
+        .contact-form-group input,
+        .contact-form-group select,
+        .contact-form-group textarea {
+            width: 100%;
+            padding: 13px 14px;
+            border: 1px solid #d9dce5;
+            border-radius: 8px;
+            background: var(--white);
+            color: var(--text);
+            font-size: 13px;
+            outline: none;
+            transition: 0.25s ease;
+        }
+
+
+        .contact-form-group input:focus,
+        .contact-form-group select:focus,
+        .contact-form-group textarea:focus {
+            border-color: var(--primary-blue);
+            box-shadow:
+                0 0 0 3px rgba(20, 46, 155, 0.08);
+        }
+
+
+        .contact-form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+
+        .contact-required {
+            color: var(--primary-red);
+        }
+
+
+        .contact-submit {
+            grid-column: 1 / -1;
+            margin-top: 5px;
+        }
+
+
+        .contact-submit button {
+            width: 100%;
+            border: none;
+            cursor: pointer;
+        }
+
+
+        /* =====================================================
+           MAP
+        ===================================================== */
+
+        .map-section {
+            background: var(--cream);
+        }
+
+
+        .map-wrapper {
+            overflow: hidden;
+            min-height: 430px;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-md);
+            background: var(--light-blue);
+        }
+
+
+        .map-wrapper iframe {
+            display: block;
+            width: 100%;
+            min-height: 430px;
+            border: 0;
+        }
+
+
+        /* =====================================================
+           CONTACT NOTE
+        ===================================================== */
+
+        .contact-note {
+            margin-top: 25px;
+            padding: 18px 20px;
+            border-radius: 10px;
+            background: var(--light-blue);
+            border-left: 4px solid var(--primary-blue);
+        }
+
+
+        .contact-note p {
+            color: var(--muted);
+            font-size: 12px;
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 850px) {
+
+            .contact-main-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .contact-form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-form-group.full-width,
+            .contact-submit {
+                grid-column: auto;
+            }
+
+            .contact-form-wrapper {
+                padding: 25px 18px;
+            }
+
+            .map-wrapper,
+            .map-wrapper iframe {
+                min-height: 350px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     TOP BAR
+====================================================== -->
+
+<div class="top-bar">
+
+    <div class="container">
+
+        <div class="top-bar-left">
+
+            <span>
+                📍 Jaipur, Rajasthan
+            </span>
+
+            <span>
+                🎓 RBSE Affiliated
+            </span>
+
+        </div>
+
+
+        <div class="top-bar-right">
+
+            <span>
+                📞 School Enquiry
+            </span>
+
+            <span>
+                ✉️ Contact Us
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     HEADER
+====================================================== -->
+
+<header class="header">
+
+    <div class="container navbar">
+
+
+        <!-- LOGO -->
+
+        <a
+            href="index.html"
+            class="logo-container"
+        >
+
+            <img
+                src="images/logo.png"
+                alt="Indo Kids Academy Senior Secondary School Logo"
+                class="school-logo"
+            >
+
+
+            <div class="school-name">
+
+                <h1>
+                    Indo Kids Academy
+                </h1>
+
+                <p>
+                    Senior Secondary School
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <!-- MOBILE MENU -->
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open navigation menu"
+        >
+            ☰
+        </button>
+
+
+        <!-- NAVIGATION -->
+
+        <nav
+            class="navigation"
+            id="navigation"
+        >
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="academics.html">
+                Academics
+            </a>
+
+            <a href="teachers.html">
+                Teachers
+            </a>
+
+            <a href="admission.html">
+                Admissions
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a
+                href="contact.html"
+                class="active"
+            >
+                Contact
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     CONTACT HERO
+====================================================== -->
+
+<section class="hero">
+
+    <div class="container hero-content">
+
+
+        <div class="hero-text">
+
+            <span class="hero-badge">
+                CONTACT INDO KIDS ACADEMY
+            </span>
+
+
+            <h2>
+
+                We'd Love to
+                <span>
+                    Hear From You
+                </span>
+
+            </h2>
+
+
+            <p>
+
+                Have a question about admissions, academics,
+                classes or the school? Send us an enquiry and
+                we'll make it easy for you to get in touch
+                with the school.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a
+                    href="#contact-form"
+                    class="btn btn-primary"
+                >
+                    Send an Enquiry
+                </a>
+
+
+                <a
+                    href="#school-location"
+                    class="btn btn-secondary"
+                >
+                    Find Our School
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="hero-image">
+
+            <div class="hero-logo-card">
+
+                <img
+                    src="images/logo.png"
+                    alt="Indo Kids Academy Logo"
+                >
+
+
+                <h3>
+                    Contact Us
+                </h3>
+
+
+                <p>
+                    Indo Kids Academy
+                </p>
+
+
+                <span>
+                    Jaipur, Rajasthan
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT INFORMATION + FORM
+====================================================== -->
+
+<section
+    class="contact-page"
+    id="contact-form"
+>
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                GET IN TOUCH
+            </span>
+
+
+            <h2>
+
+                Contact the
+                <span>
+                    School
+                </span>
+
+            </h2>
+
+
+            <p>
+
+                For admissions, school information and general
+                enquiries, please use the details below or send
+                us a message.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="contact-main-grid">
+
+
+            <!-- =================================================
+                 CONTACT INFORMATION
+            ================================================== -->
+
+            <div class="contact-info">
+
+
+                <h2>
+
+                    Let's Start a
+                    <span>
+                        Conversation
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    We welcome enquiries from parents, students
+                    and visitors interested in learning more
+                    about Indo Kids Academy.
+
+                </p>
+
+
+
+                <div class="contact-info-list">
+
+
+                    <!-- ADDRESS -->
+
+                    <div class="contact-info-box">
+
+                        <div class="contact-info-icon">
+                            📍
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                School Address
+                            </h3>
+
+
+                            <p>
+
+                                33 & 34, Subash Colony,<br>
+                                Kamla Nehru Nagar,<br>
+                                Ajmer Road,<br>
+                                Jaipur – 302006,<br>
+                                Rajasthan, India
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- PHONE -->
+
+                    <div class="contact-info-box">
+
+                        <div class="contact-info-icon">
+                            📞
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                Phone
+                            </h3>
+
+
+                            <p>
+                                School contact number will be
+                                added here.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- EMAIL -->
+
+                    <div class="contact-info-box">
+
+                        <div class="contact-info-icon">
+                            ✉️
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                Email
+                            </h3>
+
+
+                            <p>
+                                School email address will be
+                                added here.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- BOARD -->
+
+                    <div class="contact-info-box">
+
+                        <div class="contact-info-icon">
+                            🎓
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                Board
+                            </h3>
+
+
+                            <p>
+                                Rajasthan Board of Secondary
+                                Education (RBSE)
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- CLASSES -->
+
+                    <div class="contact-info-box">
+
+                        <div class="contact-info-icon">
+                            📚
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                Classes
+                            </h3>
+
+
+                            <p>
+                                Nursery to Class 12
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 CONTACT FORM
+            ================================================== -->
+
+            <div class="contact-form-wrapper">
+
+
+                <div class="contact-form-heading">
+
+                    <span class="section-label">
+                        CONTACT FORM
+                    </span>
+
+
+                    <h2>
+                        Send Us an Enquiry
+                    </h2>
+
+
+                    <p>
+
+                        Fill in the form below and send your
+                        message to the school.
+
+                    </p>
+
+                </div>
+
+
+
+                <form
+                    id="contactForm"
+                    action="https://formsubmit.co/as5475406@gmail.com"
+                    method="POST"
+                >
+                <input
+                type="hidden"
+                name="_subject"
+                value="New Contact Enquiry - Indo Kids Academy"
+                >
+
+                <input
+                type="hidden"
+                name="_template"
+                value="table"
+                >
+
+                <input
+                type="hidden"
+                name="_captcha"
+                value="true"
+                >
+                <input
+                type="hidden"
+                name="_next"
+                value="http://127.0.0.1:5500/thank-you.html"
+                >
+
+                    <div class="contact-form-grid">
+
+
+                        <!-- NAME -->
+
+                        <div class="contact-form-group">
+
+                            <label for="contactName">
+
+                                Your Name
+                                <span class="contact-required">*</span>
+
+                            </label>
+
+
+                            <input
+                                type="text"
+                                id="contactName"
+                                name="name"
+                                placeholder="Enter your name"
+                                required
+                            >
+
+                        </div>
+
+
+
+                        <!-- PHONE -->
+
+                        <div class="contact-form-group">
+
+                            <label for="contactPhone">
+
+                                Phone Number
+                                <span class="contact-required">*</span>
+
+                            </label>
+
+
+                            <input
+                                type="tel"
+                                id="contactPhone"
+                                name="phone"
+                                placeholder="Enter 10-digit mobile number"
+                                pattern="[0-9]{10}"
+                                maxlength="10"
+                                required
+                            >
+
+                        </div>
+
+
+
+                        <!-- EMAIL -->
+
+                        <div class="contact-form-group">
+
+                            <label for="contactEmail">
+
+                                Email Address
+
+                            </label>
+
+
+                            <input
+                                type="email"
+                                id="contactEmail"
+                                name="email"
+                                placeholder="Enter your email"
+                            >
+
+                        </div>
+
+
+
+                        <!-- SUBJECT -->
+
+                        <div class="contact-form-group">
+
+                            <label for="contactSubject">
+
+                                Subject
+                                <span class="contact-required">*</span>
+
+                            </label>
+
+
+                            <select
+                                id="contactSubject"
+                                name="subject"
+                                required
+                            >
+
+                                <option value="">
+                                    Select Subject
+                                </option>
+
+                                <option value="Admission Enquiry">
+                                    Admission Enquiry
+                                </option>
+
+                                <option value="Academic Information">
+                                    Academic Information
+                                </option>
+
+                                <option value="School Information">
+                                    School Information
+                                </option>
+
+                                <option value="General Enquiry">
+                                    General Enquiry
+                                </option>
+
+                                <option value="Other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <!-- MESSAGE -->
+
+                        <div
+                            class="contact-form-group full-width"
+                        >
+
+                            <label for="contactMessage">
+
+                                Message
+                                <span class="contact-required">*</span>
+
+                            </label>
+
+
+                            <textarea
+                                id="contactMessage"
+                                name="message"
+                                placeholder="Write your message here..."
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+
+                        <!-- SUBMIT -->
+
+                        <div class="contact-submit">
+
+                            <button
+                                type="submit"
+                                class="btn btn-primary"
+                            >
+                                Send Message
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SCHOOL LOCATION
+====================================================== -->
+
+<section
+    class="map-section"
+    id="school-location"
+>
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                FIND US
+            </span>
+
+
+            <h2>
+
+                Visit
+                <span>
+                    Our School
+                </span>
+
+            </h2>
+
+
+            <p>
+
+                Indo Kids Academy Senior Secondary School is
+                located on Ajmer Road in Jaipur.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="map-wrapper">
+
+            <iframe
+                src="https://www.google.com/maps?q=Indo+Kids+Academy+Senior+Secondary+School,+Jaipur&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Indo Kids Academy Senior Secondary School Location"
+            >
+            </iframe>
+
+        </div>
+
+
+        <div class="contact-note">
+
+            <p>
+
+                <strong>Address:</strong>
+                33 & 34, Subash Colony, Kamla Nehru Nagar,
+                Ajmer Road, Jaipur – 302006, Rajasthan.
+
+                Please verify the map location and school
+                address before publishing the final website.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     QUICK INFORMATION
+====================================================== -->
+
+<section class="why-us">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                SCHOOL INFORMATION
+            </span>
+
+
+            <h2>
+
+                How Can We
+                <span>
+                    Help You?
+                </span>
+
+            </h2>
+
+        </div>
+
+
+
+        <div class="features-grid">
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    📝
+                </div>
+
+
+                <h3>
+                    Admissions
+                </h3>
+
+
+                <p>
+
+                    Have questions about admission?
+                    Send us an admission enquiry.
+
+                </p>
+
+
+                <a
+                    href="admission.html"
+                    class="text-button"
+                >
+                    Admission Enquiry →
+                </a>
+
+            </div>
+
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    📚
+                </div>
+
+
+                <h3>
+                    Academics
+                </h3>
+
+
+                <p>
+
+                    Learn more about the academic journey
+                    from Nursery to Class 12.
+
+                </p>
+
+
+                <a
+                    href="academics.html"
+                    class="text-button"
+                >
+                    View Academics →
+                </a>
+
+            </div>
+
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    👩‍🏫
+                </div>
+
+
+                <h3>
+                    Teachers
+                </h3>
+
+
+                <p>
+
+                    Learn about the school's teaching
+                    team and educational approach.
+
+                </p>
+
+
+                <a
+                    href="teachers.html"
+                    class="text-button"
+                >
+                    Meet Teachers →
+                </a>
+
+            </div>
+
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    🖼️
+                </div>
+
+
+                <h3>
+                    Gallery
+                </h3>
+
+
+                <p>
+
+                    Explore school activities, events
+                    and campus photographs.
+
+                </p>
+
+
+                <a
+                    href="gallery.html"
+                    class="text-button"
+                >
+                    View Gallery →
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ADMISSION CTA
+====================================================== -->
+
+<section class="admission-cta">
+
+    <div class="container admission-content">
+
+
+        <div>
+
+            <span class="section-label light">
+                INDO KIDS ACADEMY
+            </span>
+
+
+            <h2>
+
+                Have an Admission
+                <span>
+                    Question?
+                </span>
+
+            </h2>
+
+
+            <p>
+
+                You can also submit a detailed admission
+                enquiry through our admission page.
+
+            </p>
+
+        </div>
+
+
+        <div class="admission-buttons">
+
+            <a
+                href="admission.html"
+                class="btn btn-light"
+            >
+                Admission Enquiry
+            </a>
+
+
+            <a
+                href="index.html"
+                class="btn btn-outline-light"
+            >
+                Back to Home
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+
+        <!-- SCHOOL -->
+
+        <div class="footer-school">
+
+            <img
+                src="images/logo.png"
+                alt="Indo Kids Academy Logo"
+            >
+
+
+            <h3>
+                Indo Kids Academy
+            </h3>
+
+
+            <p>
+                Senior Secondary School
+            </p>
+
+
+            <p>
+                Quality education from Nursery to Class 12.
+            </p>
+
+        </div>
+
+
+
+        <!-- QUICK LINKS -->
+
+        <div class="footer-column">
+
+            <h3>
+                Quick Links
+            </h3>
+
+
+            <a href="index.html">
+                Home
+            </a>
+
+
+            <a href="about.html">
+                About
+            </a>
+
+
+            <a href="academics.html">
+                Academics
+            </a>
+
+
+            <a href="teachers.html">
+                Teachers
+            </a>
+
+
+            <a href="admission.html">
+                Admissions
+            </a>
+
+        </div>
+
+
+
+        <!-- INFORMATION -->
+
+        <div class="footer-column">
+
+            <h3>
+                Information
+            </h3>
+
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+
+            <a href="admission.html">
+                Admission Enquiry
+            </a>
+
+        </div>
+
+
+
+        <!-- ADDRESS -->
+
+        <div class="footer-column">
+
+            <h3>
+                Visit Us
+            </h3>
+
+
+            <p>
+
+                33 & 34, Subash Colony,
+                Kamla Nehru Nagar,
+                Ajmer Road,
+                Jaipur – 302006,
+                Rajasthan
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- COPYRIGHT -->
+
+    <div class="footer-bottom">
+
+        <div class="container">
+
+            <p>
+
+                © <span id="currentYear"></span>
+                Indo Kids Academy Senior Secondary School.
+                All Rights Reserved.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- JAVASCRIPT -->
+
+<script src="js/script.js"></script>
+
+
+</body>
+
+</html>

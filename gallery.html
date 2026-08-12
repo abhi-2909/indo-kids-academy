@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gallery | Indo Kids Academy Senior Secondary School</title>
+
+    <meta
+        name="description"
+        content="Explore the school gallery of Indo Kids Academy Senior Secondary School, Jaipur."
+    >
+
+    <meta
+        name="keywords"
+        content="Indo Kids Academy gallery, Jaipur school photos, school activities Jaipur"
+    >
+
+    <meta
+        name="author"
+        content="Indo Kids Academy Senior Secondary School"
+    >
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="images/logo.png"
+    >
+
+    <!-- Google Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Main CSS -->
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <!-- Gallery CSS -->
+
+    <style>
+
+        /* =====================================================
+           GALLERY PAGE
+        ===================================================== */
+
+        .gallery-page {
+            background: var(--white);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .gallery-item {
+            position: relative;
+            min-height: 280px;
+            overflow: hidden;
+            border-radius: var(--radius-md);
+            background: var(--light-blue);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
+            transition: 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .gallery-placeholder {
+            width: 100%;
+            height: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 12px;
+            background:
+                linear-gradient(
+                    135deg,
+                    #eef2ff,
+                    #fff5f5
+                );
+            color: var(--primary-blue);
+            text-align: center;
+        }
+
+        .gallery-placeholder-icon {
+            font-size: 55px;
+        }
+
+        .gallery-placeholder h3 {
+            font-size: 17px;
+            color: var(--primary-blue);
+        }
+
+        .gallery-placeholder p {
+            max-width: 240px;
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        .gallery-note {
+            margin-top: 35px;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            background: var(--cream);
+            border-left: 4px solid var(--primary-red);
+            text-align: center;
+        }
+
+        .gallery-note p {
+            color: var(--text);
+            font-size: 13px;
+        }
+
+        .gallery-note strong {
+            color: var(--primary-blue);
+        }
+
+
+        /* =====================================================
+           GALLERY CATEGORY
+        ===================================================== */
+
+        .gallery-category {
+            margin-bottom: 70px;
+        }
+
+        .gallery-category:last-child {
+            margin-bottom: 0;
+        }
+
+        .gallery-category-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .gallery-category-title span {
+            width: 42px;
+            height: 42px;
+            display: grid;
+            place-items: center;
+            border-radius: 10px;
+            background: var(--light-blue);
+            font-size: 21px;
+        }
+
+        .gallery-category-title h3 {
+            color: var(--dark-blue);
+            font-size: 23px;
+        }
+
+
+        /* =====================================================
+           PHOTO INSTRUCTION
+        ===================================================== */
+
+        .photo-instructions {
+            padding: 70px 0;
+            background: var(--light-blue);
+        }
+
+        .photo-instruction-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .photo-instruction-card {
+            padding: 28px 22px;
+            background: var(--white);
+            border-radius: var(--radius-md);
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+
+        .photo-instruction-icon {
+            width: 60px;
+            height: 60px;
+            display: grid;
+            place-items: center;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            background: var(--light-red);
+            font-size: 27px;
+        }
+
+        .photo-instruction-card h3 {
+            color: var(--primary-blue);
+            font-size: 16px;
+            margin-bottom: 7px;
+        }
+
+        .photo-instruction-card p {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 800px) {
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .photo-instruction-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 520px) {
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item,
+            .gallery-placeholder {
+                min-height: 240px;
+                height: 240px;
+            }
+
+            .gallery-category-title h3 {
+                font-size: 19px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     TOP BAR
+====================================================== -->
+
+<div class="top-bar">
+
+    <div class="container">
+
+        <div class="top-bar-left">
+
+            <span>
+                📍 Jaipur, Rajasthan
+            </span>
+
+            <span>
+                🎓 RBSE Affiliated
+            </span>
+
+        </div>
+
+
+        <div class="top-bar-right">
+
+            <span>
+                📞 School Enquiry
+            </span>
+
+            <span>
+                ✉️ Contact Us
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     HEADER
+====================================================== -->
+
+<header class="header">
+
+    <div class="container navbar">
+
+
+        <a
+            href="index.html"
+            class="logo-container"
+        >
+
+            <img
+                src="images/logo.png"
+                alt="Indo Kids Academy Senior Secondary School Logo"
+                class="school-logo"
+            >
+
+
+            <div class="school-name">
+
+                <h1>
+                    Indo Kids Academy
+                </h1>
+
+                <p>
+                    Senior Secondary School
+                </p>
+
+            </div>
+
+        </a>
+
+
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open navigation menu"
+        >
+            ☰
+        </button>
+
+
+
+        <nav
+            class="navigation"
+            id="navigation"
+        >
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="academics.html">
+                Academics
+            </a>
+
+            <a href="teachers.html">
+                Teachers
+            </a>
+
+            <a href="admission.html">
+                Admissions
+            </a>
+
+            <a
+                href="gallery.html"
+                class="active"
+            >
+                Gallery
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     GALLERY HERO
+====================================================== -->
+
+<section class="hero">
+
+    <div class="container hero-content">
+
+
+        <div class="hero-text">
+
+            <span class="hero-badge">
+                SCHOOL GALLERY
+            </span>
+
+
+            <h2>
+
+                Moments of
+                <span>
+                    Learning & Growth
+                </span>
+
+            </h2>
+
+
+            <p>
+
+                Explore moments from school life, classroom
+                learning, activities, celebrations and the
+                student journey at Indo Kids Academy.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a
+                    href="admission.html"
+                    class="btn btn-primary"
+                >
+                    Admission Enquiry
+                </a>
+
+
+                <a
+                    href="contact.html"
+                    class="btn btn-secondary"
+                >
+                    Contact School
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="hero-image">
+
+            <div class="hero-logo-card">
+
+                <img
+                    src="images/logo.png"
+                    alt="Indo Kids Academy Logo"
+                >
+
+
+                <h3>
+                    School Gallery
+                </h3>
+
+
+                <p>
+                    Indo Kids Academy
+                </p>
+
+
+                <span>
+                    Jaipur, Rajasthan
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     GALLERY
+====================================================== -->
+
+<section class="gallery-page">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                SCHOOL LIFE
+            </span>
+
+
+            <h2>
+
+                Explore Our
+                <span>
+                    School Gallery
+                </span>
+
+            </h2>
+
+
+            <p>
+
+                Photographs of our campus, classrooms,
+                activities and school events will be
+                displayed here.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =================================================
+             SCHOOL CAMPUS
+        ================================================== -->
+
+        <div class="gallery-category">
+
+
+            <div class="gallery-category-title">
+
+                <span>
+                    🏫
+                </span>
+
+                <h3>
+                    School Campus
+                </h3>
+
+            </div>
+
+
+
+            <div class="gallery-grid">
+
+
+                <div class="gallery-item">
+
+                    <div class="gallery-placeholder">
+
+                        <div class="gallery-placeholder-icon">
+                            🏫
+                        </div>
+
+                        <h3>
+                            School Building
+                        </h3>
+
+                        <p>
+                            School campus photograph
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="gallery-item">
+
+                    <div class="gallery-placeholder">
+
+                        <div class="gallery-placeholder-icon">
+                            🌳
+                        </div>
+
+                        <h3>
+                            School Grounds
+                        </h3>
+
+                        <p>
+                            Outdoor school area
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="gallery-item">
+
+                    <div class="gallery-placeholder">
+
+                        <div class="gallery-placeholder-icon">
+                            🚪
+                        </div>
+
+                        <h3>
+                            School Entrance
+                        </h3>
+
+                        <p>
+                            Main entrance photograph
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             CLASSROOMS
+        ================================================== -->
+
+        <div class="gallery-category">
+
+
+            <div class="gallery-category-title">
+
+                <span>
+                    📚
+                </span>
+
+                <h3>
+                    Classrooms & Learning
+                </h3>
+
+            </div>
+
+
+
+            <div class="gallery-grid">
+
+
+                <div class="gallery-item">
+
+                    <div class="gallery-placeholder">
+
+                        <div class="gallery-placeholder-icon">
+                            📖
+                        </div>
+
+                        <h3>
+                            Classroom
+                        </h3>
+
+                        <p>
+                            Classroom learning environment
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="gallery-item">
+
+                    <div class="gallery-placeholder">
+
+                        <div class="gallery-placeholder-icon">
+                            🧑‍🎓
+                        </div>
+
+                        <h3>
+                            Student Learning
+                        </h3>
+
+                        <p>
+                            Students during learning activities
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="gallery-item">
+
+                    <div class="gallery-placeholder">
+
+                        <div class="gallery-placeholder-icon">
+                            🔬
+                        </div>
+
+                        <h3>
+                            Learning Activities
+                        </h3>
+
+                        <p>
+                            Academic and practical activities
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             ACTIVITIES
+        ================================================== -->
+
+        <div class="gallery-category">
+
+
+            <div class="gallery-category-title">
+
+                <span>
+                    🎨
+                </span>
+
+                <h3>
+                    Activities
+                </h3>
+
+            </div>
+
+
+
+            <div class="gallery-grid">
+
+
+                <div class="gallery-item">
+
+                    <div class="gallery-placeholder">
+
+                        <div class="gallery-placeholder-icon">
+                            🎨
+                        </div>
+
+                        <h3>
+                            Creative Activities
+                        </h3>
+
+                        <p>
+                            Art and creative learning
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="gallery-item">
+
+                    <div class="gallery-placeholder">
+
+                        <div class="gallery-placeholder-icon">
+                            ⚽
+                        </div>
+
+                        <h3>
+                            Sports
+                        </h3>
+
+                        <p>
+                            Sports and physical activities
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="gallery-item">
+
+                    <div class="gallery-placeholder">
+
+                        <div class="gallery-placeholder-icon">
+                            🎤
+                        </div>
+
+                        <h3>
+                            Student Activities
+                        </h3>
+
+                        <p>
+                            Student participation and events
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             EVENTS
+        ================================================== -->
+
+        <div class="gallery-category">
+
+
+            <div class="gallery-category-title">
+
+                <span>
+                    🎉
+                </span>
+
+                <h3>
+                    School Events
+                </h3>
+
+            </div>
+
+
+
+            <div class="gallery-grid">
+
+
+                <div class="gallery-item">
+
+                    <div class="gallery-placeholder">
+
+                        <div class="gallery-placeholder-icon">
+                            🎉
+                        </div>
+
+                        <h3>
+                            School Celebrations
+                        </h3>
+
+                        <p>
+                            School celebration photographs
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="gallery-item">
+
+                    <div class="gallery-placeholder">
+
+                        <div class="gallery-placeholder-icon">
+                            🇮🇳
+                        </div>
+
+                        <h3>
+                            National Events
+                        </h3>
+
+                        <p>
+                            National day and special events
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="gallery-item">
+
+                    <div class="gallery-placeholder">
+
+                        <div class="gallery-placeholder-icon">
+                            🏆
+                        </div>
+
+                        <h3>
+                            Achievements
+                        </h3>
+
+                        <p>
+                            Student achievements and awards
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             GALLERY NOTE
+        ================================================== -->
+
+        <div class="gallery-note">
+
+            <p>
+
+                <strong>School Gallery:</strong>
+                These gallery sections are ready for the
+                school's actual photographs. We will replace
+                these placeholders with real school images
+                before the website goes live.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PHOTO GUIDELINES
+====================================================== -->
+
+<section class="photo-instructions">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                PHOTO COLLECTION
+            </span>
+
+
+            <h2>
+
+                Bring the School
+                <span>
+                    Experience Online
+                </span>
+
+            </h2>
+
+
+            <p>
+
+                Real photographs will make the school website
+                more authentic and useful for parents.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="photo-instruction-grid">
+
+
+            <div class="photo-instruction-card">
+
+                <div class="photo-instruction-icon">
+                    📸
+                </div>
+
+
+                <h3>
+                    Campus Photos
+                </h3>
+
+
+                <p>
+
+                    School building, entrance, classrooms,
+                    grounds and facilities.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="photo-instruction-card">
+
+                <div class="photo-instruction-icon">
+                    🧑‍🎓
+                </div>
+
+
+                <h3>
+                    Student Activities
+                </h3>
+
+
+                <p>
+
+                    Events, activities, competitions and
+                    classroom learning.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="photo-instruction-card">
+
+                <div class="photo-instruction-icon">
+                    👩‍🏫
+                </div>
+
+
+                <h3>
+                    Teachers & Staff
+                </h3>
+
+
+                <p>
+
+                    Official teacher and staff photographs
+                    can be added with permission.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ADMISSION CTA
+====================================================== -->
+
+<section class="admission-cta">
+
+    <div class="container admission-content">
+
+
+        <div>
+
+            <span class="section-label light">
+                INDO KIDS ACADEMY
+            </span>
+
+
+            <h2>
+
+                Want to Learn More
+                <span>
+                    About Our School?
+                </span>
+
+            </h2>
+
+
+            <p>
+
+                Contact the school or submit an admission
+                enquiry to learn more about Indo Kids Academy.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="admission-buttons">
+
+            <a
+                href="admission.html"
+                class="btn btn-light"
+            >
+                Admission Enquiry
+            </a>
+
+
+            <a
+                href="contact.html"
+                class="btn btn-outline-light"
+            >
+                Contact Us
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+
+        <div class="footer-school">
+
+            <img
+                src="images/logo.png"
+                alt="Indo Kids Academy Logo"
+            >
+
+
+            <h3>
+                Indo Kids Academy
+            </h3>
+
+
+            <p>
+                Senior Secondary School
+            </p>
+
+
+            <p>
+                Quality education from Nursery to Class 12.
+            </p>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h3>
+                Quick Links
+            </h3>
+
+
+            <a href="index.html">
+                Home
+            </a>
+
+
+            <a href="about.html">
+                About
+            </a>
+
+
+            <a href="academics.html">
+                Academics
+            </a>
+
+
+            <a href="teachers.html">
+                Teachers
+            </a>
+
+
+            <a href="admission.html">
+                Admissions
+            </a>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h3>
+                Information
+            </h3>
+
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+
+            <a href="admission.html">
+                Admission Enquiry
+            </a>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h3>
+                Visit Us
+            </h3>
+
+
+            <p>
+
+                33 & 34, Subash Colony,
+                Kamla Nehru Nagar,
+                Ajmer Road,
+                Jaipur – 302006,
+                Rajasthan
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="footer-bottom">
+
+        <div class="container">
+
+            <p>
+
+                © <span id="currentYear"></span>
+                Indo Kids Academy Senior Secondary School.
+                All Rights Reserved.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- JAVASCRIPT -->
+
+<script src="js/script.js"></script>
+
+
+</body>
+
+</html>
